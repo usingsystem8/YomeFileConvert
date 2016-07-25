@@ -38,7 +38,7 @@ public class YomeFileConvert {
 			fop = new FileOutputStream(out_file_name);
 			long fsize = (new File(input_file_name)).length();
 			int m = 0x80;
-			for( int i=0; i< fsize; i++, m++ ) {
+			for(int i = 0; i < fsize; i++, m++) {
 				if( m == 0xFF ) {
 					m = 0x80;
 				}
@@ -51,7 +51,7 @@ public class YomeFileConvert {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			try {
 				if(fip != null){
 					fip.close();
